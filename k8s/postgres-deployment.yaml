@@ -22,8 +22,8 @@ spec:
           ports:
             - containerPort: 5432
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data 
-              name: postgres-storage
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data 
           env:
             - name: PGPASSWORD
               valueFrom:
